@@ -27,13 +27,13 @@
 #define CHTwitterCoverViewHeight 200
 
 @interface CHTwitterCoverView : UIImageView
-@property (nonatomic, weak) UIScrollView *scrollView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 - (id)initWithFrame:(CGRect)frame andContentTopView:(UIView*)view;
 @end
 
 
 @interface UIScrollView (TwitterCover)
-@property(nonatomic,weak)CHTwitterCoverView *twitterCoverView;
+@property(nonatomic, strong)CHTwitterCoverView *twitterCoverView;
 - (void)addTwitterCoverWithImage:(UIImage*)image;
 - (void)addTwitterCoverWithImage:(UIImage*)image withTopView:(UIView*)topView;
 - (void)removeTwitterCoverView;
